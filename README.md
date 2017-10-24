@@ -1,1 +1,1 @@
-# SmartThermostate
+# SmartThermostat
