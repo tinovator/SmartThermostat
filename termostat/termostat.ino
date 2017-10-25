@@ -84,11 +84,11 @@ void tempUp() {
 void getTemperature() {
   currentTemp = 0.0;
   average = 0.0;
-  for (int i = 0; i<3; i++){
-  
-  sensors.requestTemperatures();
-  average = average + sensors.getTempCByIndex(0);
-  delay(100);
+  for (int i = 0; i < 3; i++) {
+
+    sensors.requestTemperatures();
+    average = average + sensors.getTempCByIndex(0);
+    delay(100);
   }
   currentTemp = average / 3.0;
 }
@@ -106,12 +106,12 @@ void compareTemperature() {
 }
 
 void turnOn() {
-  digitalWrite(relay, HIGH);
+  digitalWrite(relay, LOW);
   Serial.println("Relay ON");
 }
 
 void turnOff() {
-  digitalWrite(relay, LOW);
+  digitalWrite(relay, HIGH);
   Serial.println("Relay OFF");
 }
 
